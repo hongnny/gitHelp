@@ -17,3 +17,10 @@ git rebase 是 Git 中的一个强大工具，用于将一个分支的提交应�
 完成 rebase：当所有冲突都解决完毕后，使用 git rebase --continue 命令继续应用剩余的提交。如果你想要中止 rebase，可以使用 git rebase --abort 命令。
 
 需要注意的是，git rebase 可能会改变提交历史，因此在与他人共享分支时要小心使用。如果你不确定如何正确使用 git rebase，建议先在一个副本分支上进行实验，以避免意外修改了主要分支的提交历史。
+
+
+
+第二次rebase操作，将main上的改动和合并到rebase分之
+1. 首先切换到rebase分之
+2. 执行git rebase main
+3. 有冲突就解决冲突，解决后执行git add . 然后在执行 git rebase --continue
